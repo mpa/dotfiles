@@ -12,7 +12,7 @@ export EDITOR='subl -w'
 alias l='ls -l'
 
 export CLICOLOR=true
-export GITAWAREPROMPT=~/scripts/git-aware-prompt
+export GITAWAREPROMPT=~/dotfiles/scripts/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
 export PS1="
