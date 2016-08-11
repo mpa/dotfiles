@@ -23,3 +23,6 @@ export LANG="pl_PL.UTF-8"
 
 export HISTFILESIZE=999999999999
 export HISTSIZE=99999999999
+
+
+alias retouch="kill -9 `ps aux |grep Jitouch |grep Library |awk {'print $2'}` && screen /Library/PreferencePanes/Jitouch.prefPane/Contents/Resources/Jitouch.app/Contents/MacOS/Jitouch"
