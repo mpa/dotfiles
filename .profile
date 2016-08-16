@@ -32,7 +32,12 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 #############
 # alias aivodb='mysql -A aivo -uroot'
 alias l='ls -l'
-alias retouch="kill -9 `ps aux |grep Jitouch |grep Library |awk {'print $2'}` && screen /Library/PreferencePanes/Jitouch.prefPane/Contents/Resources/Jitouch.app/Contents/MacOS/Jitouch"
+
+function retouchFn {
+    ps aux |grep Jitouch |grep Library |awk {'print $2'}
+}
+
+alias retouch="kill -9 `retouchFn` && screen /Library/PreferencePanes/Jitouch.prefPane/Contents/Resources/Jitouch.app/Contents/MacOS/Jitouch"
 alias push="git pull --rebase && git push"
 alias flatten-directory="find . -mindepth 2 -type f -exec mv -i '{}' . ';'"
 
